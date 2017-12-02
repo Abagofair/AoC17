@@ -1,0 +1,11 @@
+{
+	"name": "AoC17",
+	"version": "1.0.0",
+	"description": "global package.json for the different challenges",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Abagofair/AoC17.git"
+	},
+	"dependencies": {
+	}
+}
