@@ -21,7 +21,7 @@ function createSpiralMemory(numOfMemoryLocations) {
 		down: false,
 		left: false
 	};
-	//build base spiral without multiple connections
+	//build base spiral without connection adjacent nodes
 	while (currentLocation !== inputLocation) {
 		++currentLocation;
 		if (direction.right) {
@@ -86,7 +86,7 @@ function createSpiralMemory(numOfMemoryLocations) {
 	let searchLimit = 3;
 	let searchCount = 0;
 	let steps = [];
-	//map the memory connections
+	//connect the adjacent nodes
 	while (currentLocation <= inputLocation) {
 		//find the first possible connection for current node
 		if (prevNode.right !== null) {
@@ -159,6 +159,7 @@ function createSpiralMemory(numOfMemoryLocations) {
 		lastNode: currentNode 
 	};
 }
+exports.createSpiralMemory = createSpiralMemory;
 
 function findSmallestRoute(baseSpiralNode) {
 	let found = false;
