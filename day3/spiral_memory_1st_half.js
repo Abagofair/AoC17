@@ -166,7 +166,7 @@ function findSmallestRoute(baseSpiralNode) {
 	let stepCounter = 0;
 	currentNode = baseSpiralNode;
 	let newNode;
-	min = baseSpiralNode.value;;
+	min = baseSpiralNode.value;
 	while (!found) {
 		if (currentNode.right !== null && currentNode.right.value < min) {
 			min = currentNode.right.value;
