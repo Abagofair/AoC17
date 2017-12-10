@@ -7,7 +7,9 @@ file.getInputData('input.txt')
 		for (let i = 0; i < input.length; ++i) {
 			input[i] = parseInt(input[i]);
 		}
-		console.log(getCyclesBeforeInfLoop(input));
+		cycles = getCyclesBeforeInfLoop(input);
+		console.log('first half cyclecount ', cycles.count);
+		console.log('second half cyclecount ',getCyclesBeforeInfLoop(cycles.config).count);
 	})
 	.catch((err) => {
 		console.log(err);
@@ -51,7 +53,7 @@ function getCyclesBeforeInfLoop(banks) {
 		
 		++cycleCount;
 	}
-	return cycleCount;
+	return {count: cycleCount, config: banks.slice()};
 }
 
 function compareBanks(b1, b2) {
